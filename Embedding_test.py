@@ -1,7 +1,7 @@
 # coding=utf-8
 import torch
 from torch.autograd import Variable
-from models.Embedding import Embedding
+from Embedding import Embedding
 
 # random pretrain_embedding
 pretrain_embedding = torch.randn(10, 128)
