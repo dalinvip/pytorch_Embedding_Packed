@@ -31,7 +31,6 @@ class Embedding():
         if pretrained_embedding is not None:
             assert isinstance(pretrained_embedding, list), "Error, the type of pretrained_embedding must be list"
 
-        # assert length
         if pretrained_embedding is None:
             assert len(num_embeddings) == len(embedding_dim) == len(padding_idx), \
                 "Error, the length of num_embeddings/embedding_dim/padding_idx must be same if you use list for " \
@@ -119,7 +118,7 @@ class Embedding():
             print("Error, the number feature of input must be same with the Embedding")
             exit()
 
-        print("input size {}".format(input.size()))
+        # print("input size {}".format(input.size()))
 
         input = input.permute(2, 0, 1)
         embedding_concat = []
